@@ -9,12 +9,13 @@
 
 /* Setting variables */
 :root {
-  --theme-color: #FCA311;
-  --theme-font: 'Poppins', sans-serif;
+  --theme-color: #fca311;
+  --theme-font: "Poppins", sans-serif;
   --mx-width: 1500px;
 }
 
 /* Util classes -  */
+/* Normal font Heading  */
 .txt_theme_1 {
   font-family: var(--theme-font);
   font-weight: 400;
@@ -22,7 +23,7 @@
   color: black;
   line-height: 120%;
 }
-
+/* Main Heading  */
 .txt_theme_2 {
   font-family: var(--theme-font);
   font-size: 2.5rem;
@@ -30,10 +31,30 @@
   color: black;
   line-height: 120%;
 }
+/* section Heading */
+.txt_theme_3 {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 120%;
+  letter-spacing: 0.43em;
+}
+
+.design1::before{
+  content: " ";
+  position: absolute;
+  width: 6vw;
+  height: 3px;
+  background-color: var(--theme-color);
+  /* aligments */
+  top: 40%;
+  left: -7vw;
+}
 
 .theme_color {
   color: var(--theme-color);
 }
+
 
 /* Header css */
 .header {
@@ -108,10 +129,51 @@
 .get_started:hover {
   color: white;
   background-color: var(--theme-color);
-  box-shadow: 1px 1px 1px 100% var(--theme-color);
+  box-shadow: 1px 1px 7px var(--theme-color);
 }
 
 .banner_svg {
+  width: 100%;
+}
+
+/* Benefit section CSS */
+.design1 {
+  position: relative;
+  margin-left: 7vw;
+}
+
+.benefit_section {
+  width: 80%;
+  max-width: var(--mx-width);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 5rem auto;
+}
+
+.benefit_container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.benefit_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 1rem;
+  gap: 2rem;
+  background-color: rgba(20, 30, 61, 60%);
+}
+
+.wt {
+  color: white;
+}
+
+.benefit_svg {
   width: 100%;
 }
 
