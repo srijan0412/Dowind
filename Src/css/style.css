@@ -35,11 +35,12 @@
 .txt_theme_3 {
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 120%;
   letter-spacing: 0.43em;
 }
 
+/* Yellow-Line before text */
 .design1::before{
   content: " ";
   position: absolute;
@@ -49,6 +50,10 @@
   /* aligments */
   top: 40%;
   left: -7vw;
+}
+.design1 {
+  position: relative;
+  margin-left: 7vw;
 }
 
 .theme_color {
@@ -137,10 +142,6 @@
 }
 
 /* Benefit section CSS */
-.design1 {
-  position: relative;
-  margin-left: 7vw;
-}
 
 .benefit_section {
   width: 80%;
@@ -175,5 +176,72 @@
 
 .benefit_svg {
   width: 100%;
+}
+
+/* What we provide? - Section CSS  */
+.wwp_section {
+  width: 80%;
+  max-width: var(--mx-width);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 5rem auto;
+}
+
+.wwp_container {
+  display: flex;
+  gap: 6rem;
+}
+
+.wwp_details{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.specifications2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wwp_tags {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sp_line {
+  padding-top: 10px;
+  border-top: 2px solid var(--theme-color);
+}
+
+
+/* sub-area (cards) css */
+.wwp_cards {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 2rem;
+  place-content: center;
+}
+
+.wwp_card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: rgba(236, 236, 236, 100%);
+  border-top: 2rem solid var(--theme-color);
+  align-items: center;
+}
+
+.sp_posi {
+  transform: translateY(50%);
 }
 
