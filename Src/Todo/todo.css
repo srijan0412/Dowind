@@ -1,30 +1,53 @@
+/* Important variables */
+:root {
+    --theme-color: #fca311;
+    --theme-color2: rgba(236, 236, 236, 100%);
+    --theme-font: "Poppins", sans-serif;
+    --mx-width: 1500px;
+}
+
 /* Navigation Area (nav-area) css */
 .nav_area{
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 
 .nav_button {
-    border-radius: 999px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 20%);
-    transition: all 1s ease-in-out;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 5px;
+    background: rgba(0, 0, 0, 20%);
+    border-radius: 50px;
     cursor: pointer;
+    /* text-align: center; */
+    transition: all 0.5s;
+    overflow: hidden;
 }
 
-.nav_button ion-icon {
+.nav_button:hover{
+    width: 170px;
+}
+
+.icon {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.icon ion-icon {
     font-size: 1.5rem;
+    line-height: 50px;
+    transform: translateY(6px);
 }
 
 .btn_name {
-    position: absolute;
-    /* display: inline; */
-    display: none;
-    transition: all 0.5s ease-in-out;
-}
-
-.nav_button:hover .btn_name {
-    position: static;
-    display: inline;
+    line-height: 50px;
+    margin-left: 5px;
+    text-align: center;
 }
