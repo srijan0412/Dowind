@@ -1,0 +1,30 @@
+/* Navigation Area (nav-area) css */
+.nav_area{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav_button {
+    border-radius: 999px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 20%);
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.nav_button ion-icon {
+    font-size: 1.5rem;
+}
+
+.btn_name {
+    position: absolute;
+    /* display: inline; */
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav_button:hover .btn_name {
+    position: static;
+    display: inline;
+}
