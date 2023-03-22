@@ -86,15 +86,35 @@
   margin: 1.5rem auto;
 }
 
+.note_area {
+  padding: 1.5rem;
+}
+
 .note {
   background: rgba(0, 0, 0, 10%);
   border-radius: 1rem;
   display: inline-block;
-  
+  padding: 1rem;
+}
+
+.note_input {
+  background: transparent;
+  border: none;
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.note_input:focus-visible {
+  border: none;
 }
 
 .manipulators {
   font-size: 1.3rem;
   display: flex;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.manipulators ion-icon:hover {
+  transform: scale(1.2);
 }
