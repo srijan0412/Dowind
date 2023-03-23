@@ -246,6 +246,41 @@
   transform: translateY(50%);
 }
 
+/* Privacy Section css */
+.privacy_section {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+.privacy_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.privacy_banner {
+  width: 35%;
+}
+
+.privacy_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.al_left {
+  text-align: right;
+  width: 400px;
+}
+
+
+
 /* Footer css */
 .footer {
   width: 100%;
@@ -288,7 +323,7 @@
 .social_link {
   font-size: 1.5rem;
   color: black;
-  /* background-color: rgba(0, 0, 0, 20%); */
+  background-color: rgba(0, 0, 0, 20%);
   padding: 7px;
   border-radius: 50%;
   display: flex;
@@ -299,6 +334,7 @@
 
 .social_link:hover {
   color: var(--theme-color);
+  background-color: white;
 }
 
 .footer_disc {

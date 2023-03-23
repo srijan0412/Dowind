@@ -72,6 +72,11 @@
   max-width: var(--mx-width);
 }
 
+/* Nav_button width set-to open (once clicked) */
+.opened{
+  width: 160px;
+}
+
 /* Today container */
 #today{
   display: flex;
