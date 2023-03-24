@@ -91,6 +91,7 @@
   height: 70vh;
   border-radius: 1rem;
   background: rgba(0, 0, 0, 10%);
+  position: relative;
 }
 
 .sp_t {
@@ -102,6 +103,7 @@
 }
 
 .note {
+  position: relative;
   background: rgba(0, 0, 0, 10%);
   border-radius: 1rem;
   display: inline-block;
@@ -126,6 +128,18 @@
   justify-content: center;
   gap: 0.8rem;
 }
+
 .manipulators ion-icon:hover {
   transform: scale(1.2);
 }
+
+.click_here {
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  user-select: none;
+}
+
+

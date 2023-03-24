@@ -38,7 +38,7 @@
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 120%;
-  letter-spacing: 0.43em;
+  letter-spacing: 0.38em;
 }
 
 /* Yellow-Line before text */
@@ -62,6 +62,7 @@
 }
 
 
+/*------------------------------------------------------------------------------------------------------*/
 /* Header css */
 .header {
   width: 80%;
@@ -98,6 +99,7 @@
   font-size: 1.7rem;
 }
 
+/*------------------------------------------------------------------------------------------------------*/
 /* Introduction Section css */
 .greybox {
   background-color: var(--theme-color2);
@@ -142,8 +144,8 @@
   width: 100%;
 }
 
+/*------------------------------------------------------------------------------------------------------*/
 /* Benefit section CSS */
-
 .benefit_section {
   width: 80%;
   max-width: var(--mx-width);
@@ -179,6 +181,7 @@
   width: 100%;
 }
 
+/*------------------------------------------------------------------------------------------------------*/
 /* What we provide? - Section CSS  */
 .wwp_section {
   width: 80%;
@@ -246,9 +249,11 @@
   transform: translateY(50%);
 }
 
+/*------------------------------------------------------------------------------------------------------*/
 /* Privacy Section css */
 .privacy_section {
   width: 80%;
+  max-width: var(--mx-width);
   margin: 5rem auto;
   display: flex;
   gap: 4rem;
@@ -261,7 +266,6 @@
   justify-content: space-between;
 
 }
-
 
 .privacy_banner {
   width: 35%;
@@ -280,7 +284,7 @@
 }
 
 
-
+/*------------------------------------------------------------------------------------------------------*/
 /* Footer css */
 .footer {
   width: 100%;
