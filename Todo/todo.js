@@ -1,4 +1,4 @@
-// Todo-List Manipulation
+// Page Navigation - 
 let btn_today = document.getElementById("btn_today");
 let btn_bookmark = document.getElementById("btn_bookmark");
 let btn_home = document.getElementById("btn_home");
@@ -14,7 +14,7 @@ let calendar = document.getElementById("calendar");
 btn_today.addEventListener('click', ()=>{
     // .opened <- declare btn as open 
     btn_today.classList.add('opened');
-    today.classList.remove('display_none');
+    today.classList.replace('display_none', 'today_section');
 
     // Resetting other buttons
     btn_bookmark.classList.remove('opened');
@@ -22,15 +22,15 @@ btn_today.addEventListener('click', ()=>{
     btn_calendar.classList.remove('opened');
 
     // Display others as none
-    bookmark.classList.add('display_none');
-    home.classList.add('display_none');
-    calendar.classList.add('display_none');
+    bookmark.classList.replace('bookmark_section', 'display_none');
+    home.classList.replace('home_section','display_none');
+    calendar.classList.replace('calendar_section','display_none');
 });
 
 btn_bookmark.addEventListener('click', ()=>{
     // .opened <- declare btn as open 
     btn_bookmark.classList.add('opened');
-    bookmark.classList.remove('display_none');
+    bookmark.classList.replace('display_none', 'bookmark_section');
 
     // Resetting other buttons
     btn_today.classList.remove('opened');
@@ -38,31 +38,47 @@ btn_bookmark.addEventListener('click', ()=>{
     btn_calendar.classList.remove('opened');
 
     // Display others as none
-    today.classList.add('display_none');
-    home.classList.add('display_none');
-    calendar.classList.add('display_none');
+    today.classList.replace('today_section','display_none');
+    home.classList.replace('home_section','display_none');
+    calendar.classList.replace('calendar_section','display_none');
 });
 
 btn_home.addEventListener('click', ()=>{
     // .opened <- declare btn as open 
     btn_home.classList.add('opened');
+    home.classList.replace('display_none', 'home_section');
+
 
     // Resetting other buttons
     btn_today.classList.remove('opened');
     btn_bookmark.classList.remove('opened');
     btn_calendar.classList.remove('opened');
+
+    // Display others as none
+    today.classList.replace('today_section','display_none');
+    bookmark.classList.replace('bookmark_section','display_none');
+    calendar.classList.replace('calendar_section','display_none');
 });
 
 btn_calendar.addEventListener('click', ()=>{
     // .opened <- declare btn as open 
     btn_calendar.classList.add('opened');
+    calendar.classList.replace('display_none', 'calendar_section');
+
 
     // Resetting other buttons
     btn_today.classList.remove('opened')
     btn_bookmark.classList.remove('opened')
     btn_home.classList.remove('opened')
+
+    // Display others as none
+    today.classList.replace('today_section','display_none');
+    bookmark.classList.replace('bookmark_section','display_none');
+    home.classList.replace('home_section','display_none');
 });
 
+
+// Today - Section 
 
 
 
