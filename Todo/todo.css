@@ -12,15 +12,21 @@
 
 .txt_theme_4 {
   font-family: "Poppins";
-  /* font-style: normal; */
   font-weight: 275;
   font-size: 2rem;
   line-height: 110%;
 }
 
+.txt_style_special {
+  font-family: var(--theme-font);
+  line-height: 120%;
+
+}
+
 .display_none {
   display: none;
 }
+
 
 /*------------------------------------------------------------------------------------------------------*/
 /* Navigation Area (nav-area) css */
@@ -102,6 +108,7 @@
   padding: 1.5rem;
 }
 
+
 .note {
   position: relative;
   background: rgba(0, 0, 0, 10%);
@@ -129,17 +136,109 @@
   gap: 0.8rem;
 }
 
-.manipulators ion-icon:hover {
-  transform: scale(1.2);
-}
-
 .click_here {
   opacity: 0.5;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
+  -webkit-user-select: none;
   user-select: none;
 }
+
+.manipulators ion-icon:hover {
+  transform: scale(1.2);
+}
+
+
+.task_manipulator {
+  background-color: white;
+  width: 350px;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  /* Setting Position */
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.tm_heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  /* align-items: center; */
+}
+
+.close_btn {
+  width: 1.3rem;
+  cursor: pointer;
+}
+
+.i_note_form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.i_note {
+  position: relative;
+}
+
+.i_note_input {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  padding: 0 1.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.i_note_input_time {
+  height: 2.5rem;
+  font-size: 1.2rem;
+  /* padding: 0 1.9rem; */
+  padding-left: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.i_note_icon {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.2rem;
+}
+
+.i_note_label {
+  font-size: 0.8rem;
+  position: absolute;
+  top: -20px;
+  left: 5px;
+}
+
+.i_note_desc {
+  position: absolute;
+  font-size: 0.8rem;
+  top: calc(2.5rem + 5px);
+  left: 5px;
+}
+
+#create_btn {
+  position: absolute;
+  /* width: 60px; */
+  font-size: 1.2rem;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 1rem;
+}
+
+
+
 
 

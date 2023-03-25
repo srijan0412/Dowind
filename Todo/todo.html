@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="todo.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -21,11 +23,12 @@
                 <a href="#" class="link txt_theme_1">Contact Me</a>
             </li>
             <li>
-                <a href="../index.html" class="special_prop link txt_theme_1"><ion-icon name="arrow-back-circle-outline"></ion-icon></a>
+                <a href="../index.html" class="special_prop link txt_theme_1"><ion-icon
+                        name="arrow-back-circle-outline"></ion-icon></a>
             </li>
         </ul>
     </header>
-    
+
     <!-- Navigation area -->
     <div class="nav_area">
         <div id="btn_today" class="nav_button opened">
@@ -71,6 +74,28 @@
                 </div> -->
 
             </div>
+            <!-- DISPLAY -> Absolute -->
+            <div class="task_manipulator">
+                <!-- This is used to add new new Note or Edit a Note -->
+                <div class="tm_heading">
+                    <h3 id="tm_title" class="txt_theme_1">New Note</h3>
+                    <img src="../illustrations/close.svg" alt="X" class="close_btn">
+                </div>
+                <form action="#" class="i_note_form">
+                    <div class="i_note">
+                        <input type="text" class="i_note_input" required>
+                        <ion-icon class="i_note_icon" name="document-text-outline" i_note_></ion-icon>
+                        <label class="i_note_label txt_style_special">Enter new task</label>
+                    </div>
+                    <div class="i_note">
+                        <input type="time" class="i_note_input_time" name="timer_time" id="t_t">
+                        <ion-icon class="i_note_icon" name="timer-outline"></ion-icon>
+                        <label class="i_note_label txt_style_special">Enter Time</label>
+                        <p class="i_note_desc txt_style_special">If you don't want a timer, keep it unset.</p>
+                    </div>
+                    <input type="button" id="create_btn" value="Create">
+                </form>
+            </div>
             <p class="click_here txt_theme_1">-click here to add task- (currently under work)</p>
         </div>
         <div id="bookmark" class="display_none">
@@ -91,4 +116,5 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
