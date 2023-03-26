@@ -230,12 +230,26 @@
 }
 
 #create_btn {
-  position: absolute;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--theme-font);
+  background-color: transparent;
+  border: 1px solid var(--theme-color);
+  border-radius: 999px;
+  color: var(--theme-color);
+  cursor: pointer;
   /* width: 60px; */
-  font-size: 1.2rem;
+  /* position : */
+  position: absolute;
   right: 0;
   bottom: 0;
-  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+}
+#create_btn:hover {
+  background-color: var(--theme-color);
+  color: white;
+  box-shadow: 1px 1px 1px var(--theme-color);
+
 }
 
 
