@@ -79,7 +79,17 @@ btn_calendar.addEventListener('click', ()=>{
 
 
 // Today - Section 
-
+// Adding New Note (keyboard - shortcuts)
+let new_box = document.getElementsByClassName("task_manipulator")[0];
+let close_btn = document.getElementsByClassName("close_btn")[0];
+document.addEventListener('keydown', e=>{
+    if (e.key.toLowerCase() === "n" && e.altKey){
+        new_box.classList.toggle("task_manipulator_open");
+    }
+});
+close_btn.addEventListener('click', ()=>{
+    new_box.classList.toggle("task_manipulator_open");
+});
 
 
 // Live Timer

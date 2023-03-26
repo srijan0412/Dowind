@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+body {
+  overflow: hidden;
+}
+
 /* Important variables */
 :root {
   --theme-color: #fca311;
@@ -108,25 +112,18 @@
   padding: 1.5rem;
 }
 
-
 .note {
   position: relative;
   background: rgba(0, 0, 0, 10%);
   border-radius: 1rem;
   display: inline-block;
   padding: 1rem;
+  margin: 5px;
 }
 
-.note_input {
-  background: transparent;
-  border: none;
-  margin: 1rem;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.note_input:focus-visible {
-  border: none;
+.note_info {
+  width: 200px;
+  margin: 1rem 0.5rem;
 }
 
 .manipulators {
@@ -150,7 +147,7 @@
   transform: scale(1.2);
 }
 
-
+/* Add / Edit Note */
 .task_manipulator {
   background-color: white;
   width: 350px;
@@ -161,6 +158,14 @@
   position: absolute;
   right: 1rem;
   bottom: 1rem;
+
+  /* Transformation */
+  transform: translateX(200%);
+  transition: all 0.15s ease-in-out;
+}
+
+.task_manipulator_open {
+  transform: translateX(0);
 }
 
 .tm_heading {
