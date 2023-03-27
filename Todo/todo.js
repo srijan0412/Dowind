@@ -11,7 +11,7 @@ let calendar = document.getElementById("calendar");
 
 // display_none <- to make display as none
 
-btn_today.addEventListener('click', ()=>{
+const setToday = ()=>{
     // .opened <- declare btn as open 
     btn_today.classList.add('opened');
     today.classList.replace('display_none', 'today_section');
@@ -25,9 +25,15 @@ btn_today.addEventListener('click', ()=>{
     bookmark.classList.replace('bookmark_section', 'display_none');
     home.classList.replace('home_section','display_none');
     calendar.classList.replace('calendar_section','display_none');
+}
+btn_today.addEventListener('click', setToday);
+document.addEventListener('keydown', (e)=>{
+    if (e.key.toLowerCase()==="1" && e.altKey){
+        setToday();
+    }
 });
 
-btn_bookmark.addEventListener('click', ()=>{
+const setBookmark = ()=>{
     // .opened <- declare btn as open 
     btn_bookmark.classList.add('opened');
     bookmark.classList.replace('display_none', 'bookmark_section');
@@ -41,9 +47,15 @@ btn_bookmark.addEventListener('click', ()=>{
     today.classList.replace('today_section','display_none');
     home.classList.replace('home_section','display_none');
     calendar.classList.replace('calendar_section','display_none');
+}
+btn_bookmark.addEventListener('click', setBookmark);
+document.addEventListener('keydown', (e)=>{
+    if (e.key.toLowerCase()==="2" && e.altKey){
+        setBookmark();
+    }
 });
 
-btn_home.addEventListener('click', ()=>{
+const setHome = ()=>{
     // .opened <- declare btn as open 
     btn_home.classList.add('opened');
     home.classList.replace('display_none', 'home_section');
@@ -58,9 +70,15 @@ btn_home.addEventListener('click', ()=>{
     today.classList.replace('today_section','display_none');
     bookmark.classList.replace('bookmark_section','display_none');
     calendar.classList.replace('calendar_section','display_none');
+}
+btn_home.addEventListener('click', setHome);
+document.addEventListener('keydown', (e)=>{
+    if (e.key.toLowerCase()==="3" && e.altKey){
+        setHome();
+    }
 });
 
-btn_calendar.addEventListener('click', ()=>{
+const setCalendar = ()=>{
     // .opened <- declare btn as open 
     btn_calendar.classList.add('opened');
     calendar.classList.replace('display_none', 'calendar_section');
@@ -75,6 +93,12 @@ btn_calendar.addEventListener('click', ()=>{
     today.classList.replace('today_section','display_none');
     bookmark.classList.replace('bookmark_section','display_none');
     home.classList.replace('home_section','display_none');
+}
+btn_calendar.addEventListener('click', setCalendar);
+document.addEventListener('keydown', (e)=>{
+    if (e.key.toLowerCase()==="4" && e.altKey){
+        setCalendar();
+    }
 });
 
 
