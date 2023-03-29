@@ -1,0 +1,7 @@
+/* Important variables */
+:root {
+    --theme-color: #fca311;
+    --theme-color2: rgba(236, 236, 236, 100%);
+    --theme-font: "Poppins", sans-serif;
+    --mx-width: 1500px;
+  }
