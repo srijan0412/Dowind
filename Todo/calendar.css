@@ -63,6 +63,20 @@
   text-align: center;
   padding: 10px;
   margin: 5px;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+
+.weeks_dates li:hover {
+  background-color: rgba(236, 236, 236, 60%);
+}
+
+.active {
+  background-color: white;
+}
+
+.inactive {
+  opacity: 40%;
 }
 
 .upcomming_events {

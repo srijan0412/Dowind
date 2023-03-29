@@ -115,7 +115,6 @@ close_btn.addEventListener('click', ()=>{
     new_box.classList.toggle("task_manipulator_open");
 });
 
-
 // Live Timer
 let months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let live_time = document.getElementById("live_time");
@@ -145,4 +144,48 @@ setInterval(() => {
     // Setting Live Time 
     live_time.innerHTML = live_date + " " + months[live_months] + " " + live_year + ", " + live_hrs + ":" + live_mnt + " "+d;
 }, 1000);
+
+// Calendar section Js
+let curr_month = document.getElementById("curr_month");
+let days = document.getElementsByClassName("weeks_dates")[0];
+let prev = document.getElementById("prev_month");
+let next = document.getElementById("next_month");
+let new_date = new Date();
+let mnt = new_date.getMonth();
+let yr = new_date.getFullYear();
+// fdom = first day of month
+// ldom = last date of month
+// ldolm = last date of last month 
+// ldom0 = last day of the month
+const render_calendar = ()=> {
+    let fdom = new Date(yr, mnt, 1).getDay();
+    let ldom = new Date(yr, mnt+1, 0).getDate();
+    let ldom0 = new Date(yr, mnt, ldom).getDay();
+    let ldolm = new Date(yr, mnt, 0).getDate();
+    let liTag = "";
+    
+    for (let i=fdom; i>0; i--){
+        liTag += `<li class="inactive">${ldolm-i+1}</li>`;
+    }
+    for (let i=1; i<=ldom; i++){
+        let istoday = i === new_date.getDate() && mnt === new Date().getMonth() && yr === new Date().getFullYear() ? "active":"";
+        liTag += `<li class="${istoday}">${i}</li>`;
+    }
+    for (let i=ldom0; i<6; i++){
+        liTag += `<li class="inactive">${i-ldom0+1}</li>`;
+    }
+
+    curr_month.innerHTML = `${months[mnt]} ${yr}`;
+    days.innerHTML = liTag;
+}
+render_calendar();
+
+prev.addEventListener('click', ()=>{
+    mnt--;
+    render_calendar();
+});
+next.addEventListener('click', ()=>{
+    mnt++;
+    render_calendar();
+});
 
