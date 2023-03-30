@@ -18,14 +18,14 @@
   width: 40%;
   background: rgba(0, 0, 0, 10%);
   border-radius: 1rem;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
 }
 
 .calendar_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .month_navigation {
@@ -60,11 +60,11 @@
 .weeks_dates li {
   font-family: var(--theme-font);
   font-size: 1rem;
-  text-align: center;
-  padding: 10px;
-  margin: 5px;
   border-radius: 999px;
   transition: all 0.2s;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
 }
 
 .weeks_dates li:hover {

@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <!-- Canvas -->
+    <canvas class="orb_canvas"></canvas>
+
     <!-- Header -->
     <header class="header">
         <img src="../icons/logo.png" class="logo" alt="-Logo-">
@@ -88,7 +91,7 @@
                 </div>
                 <form action="#" class="i_note_form">
                     <div class="i_note">
-                        <input type="text" class="i_note_input" required>
+                        <input type="text" id="input_note_txt" class="i_note_input" required>
                         <ion-icon class="i_note_icon" name="document-text-outline" i_note_></ion-icon>
                         <label class="i_note_label txt_style_special">Enter new task</label>
                     </div>
@@ -98,6 +101,7 @@
                         <label class="i_note_label txt_style_special">Enter Time</label>
                         <p class="i_note_desc txt_style_special">If you don't want a timer, keep it unset.</p>
                     </div>
+                    <!-- submit button -->
                     <input type="button" id="create_btn" value="Create">
                 </form>
             </div>
@@ -151,6 +155,7 @@
 
     <!-- Importing js -->
     <script src="todo.js"></script>
+    <script src="canvas.js"></script>
     <!-- Importing Ionicons  -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

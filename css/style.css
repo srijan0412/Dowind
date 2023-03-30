@@ -15,6 +15,11 @@
   --mx-width: 1500px;
 }
 
+/* Disabling scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Util classes -  */
 /* Normal font Heading  */
 .txt_theme_1 {

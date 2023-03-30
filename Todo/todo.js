@@ -145,6 +145,24 @@ setInterval(() => {
     live_time.innerHTML = live_date + " " + months[live_months] + " " + live_year + ", " + live_hrs + ":" + live_mnt + " "+d;
 }, 1000);
 
+document.getElementById("create_btn").addEventListener('click', ()=>{
+    let val = document.getElementById("input_note_txt").value;
+    let note = `<div class="note">
+    <p class="note_info txt_theme_1">${val}</p>
+    <div class="manipulators">
+        <ion-icon id="checkmark" name="checkmark-done-outline"></ion-icon>
+        <ion-icon id="edit" name="create-outline"></ion-icon>
+        <ion-icon id="delete" name="trash-outline"></ion-icon>
+        <ion-icon id="alarm" name="alarm-outline"></ion-icon>
+    </div>
+    </div>`;
+    document.getElementsByClassName("note_area")[0].innerHTML+=note;
+    close_btn.click();
+});
+
+
+
+
 // Calendar section Js
 let curr_month = document.getElementById("curr_month");
 let days = document.getElementsByClassName("weeks_dates")[0];
@@ -182,10 +200,18 @@ render_calendar();
 
 prev.addEventListener('click', ()=>{
     mnt--;
+    if (mnt<0){
+        mnt=11;
+        yr--;
+    }
     render_calendar();
 });
 next.addEventListener('click', ()=>{
     mnt++;
+    if (mnt>11){
+        mnt=0;
+        yr++;
+    }
     render_calendar();
 });
 
